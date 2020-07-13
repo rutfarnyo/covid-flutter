@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_stock/src/pages/home_page.dart';
+import 'package:my_stock/src/pages/welcome_page.dart';
 
 class App extends StatelessWidget {
   @override
@@ -10,7 +11,7 @@ class App extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomePage(),
+      home: WelcomePage(),
     );
   }
 }
