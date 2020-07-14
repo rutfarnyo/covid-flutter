@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:my_stock/src/pages/form_login.dart';
 import 'package:my_stock/src/pages/social_login_button.dart';
 
 class LoginPage extends StatelessWidget {
@@ -10,22 +11,24 @@ class LoginPage extends StatelessWidget {
         alignment: Alignment.topCenter,
         children: [
           _buildBackground(),
-          Column(
-            children: <Widget>[
-              SizedBox(height: 60),
-              Image.asset(
-                "assets/images/header_1.png",
-                width: 280,
-              ),
-              SizedBox(height: 12),
-              _buildForm(),
-              SizedBox(height: 12),
-              _buildForgotPassword(),
-              SizedBox(height: 22),
-              ..._buildOptionalLogin(context),
-              SizedBox(height: 22),
-              _buildSignUp(),
-            ],
+          SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 60),
+                Image.asset(
+                  "assets/images/header_1.png",
+                  width: 320,
+                ),
+                SizedBox(height: 12),
+                FormLogin(),
+                SizedBox(height: 22),
+                _buildForgotPassword(),
+                SizedBox(height: 22),
+                ..._buildOptionalLogin(context),
+                SizedBox(height: 32),
+                _buildSignUp(),
+              ],
+            ),
           )
         ],
       ),
@@ -38,7 +41,6 @@ class LoginPage extends StatelessWidget {
         ),
       );
 
-  _buildForm() => Text("fsafsaf");
 
   FlatButton _buildForgotPassword() => FlatButton(
         textColor: Colors.white,
@@ -52,7 +54,7 @@ class LoginPage extends StatelessWidget {
 
   List _buildOptionalLogin(BuildContext context) => [
         _buildOrDivider(),
-        SizedBox(height: 12),
+        SizedBox(height: 22),
         _buildSocialLogin(context),
       ];
 
