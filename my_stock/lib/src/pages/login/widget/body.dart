@@ -1,37 +1,35 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:my_stock/src/pages/form_login.dart';
-import 'package:my_stock/src/pages/social_login_button.dart';
+import 'package:my_stock/src/pages/login/widget/form_login.dart';
+import 'package:my_stock/src/pages/login/widget/social_login_button.dart';
 
-class LoginPage extends StatelessWidget {
+class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Stack(
-        alignment: Alignment.topCenter,
-        children: [
-          _buildBackground(),
-          SingleChildScrollView(
-            child: Column(
-              children: <Widget>[
-                SizedBox(height: 60),
-                Image.asset(
-                  "assets/images/header_1.png",
-                  width: 320,
-                ),
-                SizedBox(height: 12),
-                FormLogin(),
-                SizedBox(height: 22),
-                _buildForgotPassword(),
-                SizedBox(height: 22),
-                ..._buildOptionalLogin(context),
-                SizedBox(height: 32),
-                _buildSignUp(),
-              ],
-            ),
-          )
-        ],
-      ),
+    return Stack(
+      alignment: Alignment.topCenter,
+      children: [
+        _buildBackground(),
+        SingleChildScrollView(
+          child: Column(
+            children: <Widget>[
+              SizedBox(height: 60),
+              Image.asset(
+                "assets/images/header_1.png",
+                width: 320,
+              ),
+              SizedBox(height: 12),
+              FormLogin(),
+              SizedBox(height: 22),
+              _buildForgotPassword(),
+              SizedBox(height: 22),
+              ..._buildOptionalLogin(context),
+              SizedBox(height: 32),
+              _buildSignUp(),
+            ],
+          ),
+        )
+      ],
     );
   }
 
@@ -40,7 +38,6 @@ class LoginPage extends StatelessWidget {
           gradient: BackgroundTheme.gradient,
         ),
       );
-
 
   FlatButton _buildForgotPassword() => FlatButton(
         textColor: Colors.white,

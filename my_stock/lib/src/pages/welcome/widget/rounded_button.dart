@@ -11,7 +11,7 @@ class RoundedButton extends StatelessWidget {
     this.title = "LOGIN",
     this.color = Colors.orange,
     this.onPress,
-    this.colorText = Colors.white
+    this.colorText = Colors.white,
   }) : super(key: key);
 
   @override

@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
-import 'package:my_stock/src/pages/login_page.dart';
+import 'package:my_stock/src/pages/login/login_page.dart';
+import 'package:my_stock/src/pages/login/widget/body.dart';
 
 class LoginButton extends StatelessWidget {
   final VoidCallback press;
